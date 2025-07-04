@@ -1,0 +1,96 @@
+.orders-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 32px 40px;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: #f5f5f5;
+}
+.orders-header {
+    margin-bottom: 24px;
+}
+.orders-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1976d2;
+    margin: 0;
+}
+.orders-main {
+    overflow-x: auto;
+}
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.orders-table th, .orders-table td {
+    padding: 14px 18px;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #e0e0e0;
+}
+.orders-table th {
+    background: #f0f6ff;
+    color: #1976d2;
+    font-weight: 600;
+}
+.orders-table tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+.orders-table tr:last-child {
+    border-bottom: none;
+}
+.orders-table td {
+    color: #444;
+    font-size: 1rem;
+}
+.edit-btn, .delete-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-right: 6px;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+}
+.edit-btn {
+    background: #e3f2fd;
+    color: #2196f3;
+    border: 1px solid #90caf9;
+}
+.edit-btn:hover {
+    background: #1976d2;
+    color: #fff;
+    border-color: #1976d2;
+}
+.delete-btn {
+    background: #ffebee;
+    color: #f44336;
+    border: 1px solid #ef9a9a;
+}
+.delete-btn:hover {
+    background: #f44336;
+    color: #fff;
+    border-color: #f44336;
+}
+@media (max-width: 900px) {
+    .orders-container {
+        padding: 16px 6px;
+    }
+    .orders-header h2 {
+        font-size: 1.3rem;
+    }
+    .orders-table th, .orders-table td {
+        padding: 8px 6px;
+        font-size: 13px;
+    }
+} 

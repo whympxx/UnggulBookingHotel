@@ -1,0 +1,302 @@
+/* iOS-style settings page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+:root {
+    --header-height: 44px;
+    --footer-height: 80px;
+    --transition-speed: 0.2s;
+    --border-color: #e0e0e0;
+    --active-color: rgba(0, 100, 200, 0.1);
+    --text-primary: #333333;
+    --text-secondary: #555555;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --accent-color: #0064c8;
+    --accent-hover: #004f99;
+    --danger-color: #ff3b30;
+    --group-bg: #f8f9fa;
+    --group-border: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-opacity: 0.8;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+    color: var(--text-primary);
+}
+
+.account-security-container {
+    background-color: var(--bg-secondary);
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    color: var(--text-primary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: calc(var(--footer-height) + 20px);
+}
+
+.main-bg {
+    background-color: var(--bg-secondary);
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    color: var(--text-primary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: calc(var(--footer-height) + 20px);
+}
+
+.main-header {
+    background: linear-gradient(to right, #0064c8, #0084ff);
+    padding: 0 16px;
+    border-bottom: 0.5px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex-shrink: 0;
+    height: var(--header-height);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: all var(--transition-speed) ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.back-button i {
+    font-size: 16px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.back-button:hover i {
+    transform: translateX(-2px);
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
+
+.company-name {
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    flex: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.settings-container {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-menu {
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 12px 16px;
+    border: 0.5px solid var(--group-border);
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.menu-group {
+    background-color: var(--bg-primary);
+}
+
+.menu-category {
+    padding: 12px 16px;
+    background-color: var(--group-bg);
+}
+
+.menu-category span {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--text-primary);
+    border-bottom: 0.5px solid var(--border-color);
+    transition: all var(--transition-speed) ease;
+    background-color: var(--bg-primary);
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 48px;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background-color: var(--active-color);
+}
+
+.menu-item.active {
+    background-color: var(--active-color);
+}
+
+.menu-item span {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    flex: 1;
+    margin-right: 12px;
+}
+
+.menu-item i {
+    color: var(--text-secondary);
+    font-size: 17px;
+    transition: transform var(--transition-speed) ease;
+    flex-shrink: 0;
+    opacity: var(--hover-opacity);
+}
+
+.menu-item.reset-button {
+    color: var(--danger-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.menu-item.reset-button:hover {
+    background-color: rgba(255, 59, 48, 0.1);
+}
+
+.menu-item.reset-button i {
+    color: var(--danger-color);
+}
+
+.profile-saya {
+    margin-top: 12px;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0.5px solid var(--group-border);
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.account-details {
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 12px 16px;
+    border: 0.5px solid var(--group-border);
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 0.5px solid var(--border-color);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item span {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    flex: 1;
+    margin-right: 12px;
+}
+
+.detail-value {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.detail-value span {
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.detail-value i {
+    color: var(--text-secondary);
+    font-size: 17px;
+    transition: transform var(--transition-speed) ease;
+    flex-shrink: 0;
+    opacity: var(--hover-opacity);
+}
+
+.blank-space {
+    height: 150px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    margin: 20px 16px;
+    border: 0.5px solid var(--group-border);
+    box-shadow: 0 2px 10px var(--shadow-color);
+} 

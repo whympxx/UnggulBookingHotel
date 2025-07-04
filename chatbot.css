@@ -1,0 +1,302 @@
+/* iOS-style settings page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+:root {
+    --header-height: 44px;
+    --footer-height: 80px;
+    --transition-speed: 0.2s;
+    --border-color: #e0e0e0;
+    --active-color: rgba(0, 100, 200, 0.1);
+    --text-primary: #333333;
+    --text-secondary: #555555;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --accent-color: #0064c8;
+    --accent-hover: #004f99;
+    --danger-color: #ff3b30;
+    --group-bg: #f8f9fa;
+    --group-border: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-opacity: 0.8;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+    color: var(--text-primary);
+}
+
+.account-security-container {
+    background-color: var(--bg-secondary);
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    color: var(--text-primary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: calc(var(--footer-height) + 20px);
+}
+
+.main-header {
+    background: linear-gradient(to right, var(--accent-color), #0084ff);
+    padding: 0 16px;
+    border-bottom: 0.5px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    flex-shrink: 0;
+    height: var(--header-height);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: all var(--transition-speed) ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.back-button i {
+    font-size: 16px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.back-button:hover i {
+    transform: translateX(-2px);
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
+
+.main-header .company-name {
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    flex: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.menu-group {
+    margin: 12px 16px;
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 0.5px solid var(--group-border);
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.chatbot-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+}
+
+.chatbot-header {
+    background: linear-gradient(to right, var(--accent-color), #0084ff);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.chatbot-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.chatbot-title i {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-subtitle {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--bg-secondary);
+}
+
+.message {
+    display: flex;
+    margin-bottom: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message-content {
+    max-width: 70%;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    border: 0.5px solid var(--group-border);
+}
+
+.message.bot .message-content {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.message.user .message-content {
+    background: var(--accent-color);
+    color: white;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.chatbot-input {
+    padding: 1rem;
+    background: var(--bg-primary);
+    border-top: 0.5px solid var(--border-color);
+    display: flex;
+    gap: 1rem;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 0.5px solid var(--group-border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all var(--transition-speed) ease;
+    background-color: var(--bg-secondary);
+}
+
+.chatbot-input input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px var(--active-color);
+}
+
+.chatbot-input button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.chatbot-input button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.chatbot-input button:active {
+    transform: scale(0.95);
+}
+
+.chatbot-input button i {
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Animation */
+.message.loading .message-content {
+    position: relative;
+}
+
+.message.loading .message-content::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--bg-secondary);
+    border-top: 2px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+} 

@@ -1,0 +1,163 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.location-container {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    width: 220px;
+    background: #fff;
+    border-right: 1px solid #eee;
+    padding: 0;
+}
+.sidebar-header {
+    padding: 24px 0 16px 24px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #222;
+}
+.sidebar-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu li {
+    padding: 12px 24px;
+    color: #222;
+    cursor: pointer;
+    font-size: 15px;
+    border-left: 3px solid transparent;
+    transition: background 0.2s, border 0.2s;
+}
+.sidebar-menu li.active, .sidebar-menu li:hover {
+    background: #f0f6ff;
+    border-left: 3px solid #2196f3;
+    color: #2196f3;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.main-header {
+    background: #2196f3;
+    color: #fff;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo {
+    width: 32px;
+    height: 32px;
+}
+.brand-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+.location-section {
+    background: #fff;
+    margin: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 32px 24px 24px 24px;
+}
+.location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.location-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+.add-btn {
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.add-btn:hover {
+    background: #1769aa;
+}
+.table-container {
+    overflow-x: auto;
+}
+.location-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+.location-table th, .location-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 15px;
+}
+.location-table th {
+    background: #f0f6ff;
+    font-weight: 600;
+}
+.hotel-photo {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.edit-btn, .delete-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 4px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+.edit-btn {
+    color: #2196f3;
+}
+.edit-btn:hover {
+    background: #e3f2fd;
+}
+.delete-btn {
+    color: #f44336;
+}
+.delete-btn:hover {
+    background: #ffebee;
+}
+@media (max-width: 900px) {
+    .location-section {
+        margin: 16px;
+        padding: 16px 6px 12px 6px;
+    }
+    .main-header {
+        padding: 12px 10px;
+    }
+    .sidebar {
+        width: 150px;
+    }
+    .hotel-photo {
+        width: 70px;
+        height: 50px;
+    }
+} 

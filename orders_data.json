@@ -1,0 +1,30 @@
+[
+    {
+        "customer": "Wahyu Marga Pratama",
+        "hotel": "Hotel Santika Prime",
+        "checkin": "2025-06-24",
+        "checkout": "2025-06-26",
+        "status": "Pending",
+        "total": "Rp\u00a02.755.000,00",
+        "id": 1,
+        "hotel_image": "HotelSantika.jpg"
+    },
+    {
+        "customer": "Wahyu Marga Pratama",
+        "hotel": "Hotel Fairfield",
+        "checkin": "2025-06-24",
+        "checkout": "2025-06-26",
+        "status": "Pending",
+        "total": "Rp\u00a03.394.050,00",
+        "id": 2
+    },
+    {
+        "customer": "Wahyu Marga Pratama",
+        "hotel": "Hotel Santika Prime",
+        "checkin": "2025-07-10",
+        "checkout": "2025-07-18",
+        "status": "Pending",
+        "total": "Rp\u00a08.265.000,00",
+        "id": 3
+    }
+]
