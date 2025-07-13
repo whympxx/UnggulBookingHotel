@@ -1,0 +1,31 @@
+# PHP files
+*.php linguist-language=PHP
+
+# CSS files
+*.css linguist-language=CSS
+
+# JavaScript files
+*.js linguist-language=JavaScript
+
+# JSON files
+*.json linguist-language=JSON
+
+# Markdown files
+*.md linguist-language=Markdown
+
+# Exclude certain files from language detection
+*.min.js linguist-vendored=true
+*.min.css linguist-vendored=true
+
+# Exclude images and other binary files
+*.jpg linguist-vendored=true
+*.jpeg linguist-vendored=true
+*.png linguist-vendored=true
+*.gif linguist-vendored=true
+*.ico linguist-vendored=true
+*.svg linguist-vendored=true
+*.pdf linguist-vendored=true
+
+# Exclude documentation files from language stats
+README.md linguist-documentation=true
+CHANGELOG.md linguist-documentation=true
