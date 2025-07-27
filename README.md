@@ -74,9 +74,37 @@ php -S localhost:8000
 ---
 
 ## 📂 Struktur File
+
+### 🏗️ Feature-Sliced Design (FSD) Architecture
+**Proyek ini telah diimplementasikan dengan arsitektur FSD untuk meningkatkan maintainability dan scalability.**
+
+```
+src/
+├── app/                    # 🎯 Application Layer
+│   ├── index.php          # Main entry point
+│   └── providers/         # App-level providers
+│       ├── routing.php    # Routing logic
+│       ├── database.php   # Database operations
+│       └── auth.php       # Authentication
+│
+├── shared/                # 🔄 Shared Layer
+│   ├── ui/components/     # Reusable UI components
+│   └── lib/utils.php      # Common utilities
+│
+├── features/             # ✨ Features Layer
+│   ├── hotel-booking/    # ✅ Hotel booking feature
+│   ├── user-management/  # 🚧 User management
+│   ├── admin-dashboard/  # 🚧 Admin dashboard
+│   ├── agent-management/ # 🚧 Agent management
+│   └── payment-processing/ # 🚧 Payment processing
+│
+└── entities/             # 📊 Business entities
+```
+
+### 📋 Legacy Files (Backward Compatibility)
 ```
 PemesananHotel/
-├── 🏠 index.php              # Halaman utama
+├── 🏠 index.php              # Halaman utama (Legacy)
 ├── 🛒 cart.php               # Keranjang belanja
 ├── 💳 payment.php            # Halaman pembayaran
 ├── 📊 admin_dashboard.php    # Dashboard admin
@@ -147,6 +175,34 @@ PemesananHotel/
 ![CSS](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?style=for-the-badge&logo=javascript)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?style=for-the-badge&logo=bootstrap)
+
+---
+
+## 🏗️ Feature-Sliced Design (FSD)
+
+### 🌟 Arsitektur Modern
+Proyek ini menggunakan **Feature-Sliced Design (FSD)**, metodologi arsitektur yang:
+- 📦 **Modular**: Setiap fitur terisolasi dan independen
+- 🔧 **Maintainable**: Kode terorganisir berdasarkan domain bisnis
+- 📈 **Scalable**: Mudah menambah fitur dan developer baru
+- 🧪 **Testable**: Setiap layer dapat ditest secara independen
+
+### 📚 Dokumentasi FSD
+📖 **[Baca dokumentasi lengkap FSD](FSD_ARCHITECTURE.md)**
+
+### ✅ Fitur yang Telah Diimplementasi dengan FSD:
+- **Hotel Booking**: Pencarian, filtering, dan manajemen hotel
+- **Shared Components**: Header, navigation, dan utilities
+- **Authentication**: Login, register, dan manajemen sesi
+- **Routing System**: Clean URL routing dengan parameter support
+
+### 🚧 Roadmap FSD:
+- [ ] User Management Feature
+- [ ] Admin Dashboard Feature  
+- [ ] Agent Management Feature
+- [ ] Payment Processing Feature
+- [ ] API Layer Implementation
+- [ ] Unit Testing Framework
 
 ---
 
