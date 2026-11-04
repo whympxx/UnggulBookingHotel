@@ -1,240 +1,105 @@
-# 🌐 PemesananHotel
-**Sistem Pemesanan Hotel Lengkap**  
-*Versi: 2.0.0+ | Terakhir Diperbarui: Juli 2025 | Status: Production Ready*
+# 🌐 Unggul Booking Hotel
 
-## 🚀 Deskripsi
-PemesananHotel adalah aplikasi web booking hotel dengan fitur lengkap mulai dari pencarian hotel, manajemen pesanan, hingga dashboard admin dan agen. Mendukung multi-peran (User, Agent, Admin) dan responsif.
+Aplikasi web pemesanan hotel dengan tiga peran (Customer, Agent, Admin), dibangun ulang menggunakan **Laravel 12**.
 
----
+## 🧩 Fitur
 
-## 🧩 Fitur Utama
+| Peran | Fitur |
+|---|---|
+| **Publik** | Beranda dengan scene 3D + pencarian live, Jelajahi (filter harga/rating/urutan), detail hotel (galeri, fasilitas, ulasan), Properties, daftar Agent, chatbot bantuan, mode gelap, pilihan bahasa (ID/EN/JA/ZH) |
+| **Customer** | Registrasi/login, lupa password, wishlist, keranjang, booking (cek ketersediaan kamar), kode promo, pembayaran BCA VA / QRIS / COD, invoice cetak, ulasan & rating, Pesanan Saya, profil & ganti password |
+| **Agent** | Dashboard statistik nyata, tambah/edit/hapus hotel (upload gambar), daftar pesanan, laporan bulanan & pendapatan per hotel |
+| **Admin** | Dashboard realtime + grafik pendapatan, kelola kode promo, kelola hotel (Location), kelola tipe kamar (Property), kelola order, kelola agent, Website Setting (judul, warna, logo, footer, mode maintenance, bahasa, zona waktu), ganti foto profil |
 
-### 🔍 Pencarian & Pemesanan Hotel
-- Cari hotel berdasar lokasi, rating, dan fasilitas.
-- Konfirmasi pemesanan dengan harga otomatis.
-- **Utama:** `index.php`, `layanan.php`, `properties.php`.
-
-### 🛒 Keranjang & Checkout
-- Tambahkan hotel untuk dipesan nanti, checkout mudah.
-- **Utama:** `cart.php`, `payment.php`.
-
-### 💳 Pembayaran
-- Metode: VA (BCA), QRIS, COD.
-- **Utama:** `payment.php`.
-
-### 🔐 Manajemen Akun & Keamanan
-- Registrasi, login, ganti password.
-- **Utama:** `Register.php`, `login.php`.
-
-### 📊 Dashboard Admin & Agen
-- Statistik hotel, kamar, dan pesanan.
-- **Utama:** `admin_dashboard.php`, `agent_dashboard.php`.
-
-### 🏨 Manajemen Hotel & Kamar
-- Kelola hotel dan kamar, upload foto.
-- **Utama:** `admin_properties.php`.
-
----
-
-## 🔗 Alur Penggunaan
-1. **Pencarian Hotel** → 2. **Tambah ke Keranjang** → 3. **Checkout** → 4. **Pilih Pembayaran** → 5. **Konfirmasi Pesanan**
-
----
+Harga selalu dihitung di server: `harga kamar × malam + pajak 10% + biaya layanan 1%`.
+Tipe kamar bawaan: Standard (×1), Deluxe (×1,5), Suite (×2).
 
 ## 🛠️ Teknologi
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Backend:** PHP 7.4+
-- **Styling:** Bootstrap 5, Font Awesome
-- **Font:** Google Fonts (Poppins)
 
----
+- PHP 8.2+, Laravel 12, Eloquent ORM
+- Database: SQLite (default) atau MySQL/MariaDB
+- Blade + design system sendiri (`public/css/modern.css`, mode terang/gelap)
+- Three.js (scene 3D), Chart.js, Cropper.js, Font Awesome
 
-## 🚀 Quick Start
+## 🚀 Instalasi
 
-### Prerequisites
-- PHP 7.4 atau lebih tinggi
-- Web server (Apache/Nginx)
-- MySQL/MariaDB (optional)
-
-### Installation
 ```bash
-# Clone repository
 git clone https://github.com/whympxx/UnggulBookingHotel.git
-
-# Masuk ke direktori project
 cd UnggulBookingHotel
-
-# Jalankan di localhost
-php -S localhost:8000
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
 ```
 
-### Demo
-🌐 [Live Demo](https://your-demo-url.com) | 📺 [Video Demo](https://your-video-url.com)
+Buka http://localhost:8000.
 
----
+**Memakai MySQL (XAMPP)**: buat database `hotel_booking`, lalu ubah `.env`:
 
-## 📂 Struktur File
-
-### 🏗️ Feature-Sliced Design (FSD) Architecture
-**Proyek ini telah diimplementasikan dengan arsitektur FSD untuk meningkatkan maintainability dan scalability.**
-
-```
-src/
-├── app/                    # 🎯 Application Layer
-│   ├── index.php          # Main entry point
-│   └── providers/         # App-level providers
-│       ├── routing.php    # Routing logic
-│       ├── database.php   # Database operations
-│       └── auth.php       # Authentication
-│
-├── shared/                # 🔄 Shared Layer
-│   ├── ui/components/     # Reusable UI components
-│   └── lib/utils.php      # Common utilities
-│
-├── features/             # ✨ Features Layer
-│   ├── hotel-booking/    # ✅ Hotel booking feature
-│   ├── user-management/  # 🚧 User management
-│   ├── admin-dashboard/  # 🚧 Admin dashboard
-│   ├── agent-management/ # 🚧 Agent management
-│   └── payment-processing/ # 🚧 Payment processing
-│
-└── entities/             # 📊 Business entities
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=hotel_booking
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 
-### 📋 Legacy Files (Backward Compatibility)
+### Akun demo (password semua: `password`)
+
+| Peran | Email | Login di |
+|---|---|---|
+| Admin | admin@unggulhotel.com | `/admin/login` |
+| Agent | navesld@gmail.com (Larry Naves) | `/agent/login` |
+| Customer | user@unggulhotel.com | `/login` |
+
+Kode promo demo: `WELCOME10`, `HEMAT50K`, `LIBURAN25`.
+
+### Pengaturan `.env` khusus
+
+| Variabel | Fungsi |
+|---|---|
+| `ADMIN_REGISTRATION_CODE` | Kode undangan registrasi admin. Kosong = registrasi admin publik ditutup. |
+| `FEATURE_PAYMENT_SANDBOX` | `true` = tampilkan tombol simulasi "Saya Sudah Bayar" (belum ada payment gateway). |
+| `MAIL_MAILER` | Default `log`: email reset password ditulis ke `storage/logs/laravel.log`. |
+
+## 🧪 Test
+
+```bash
+php artisan test
 ```
-PemesananHotel/
-├── 🏠 index.php              # Halaman utama (Legacy)
-├── 🛒 cart.php               # Keranjang belanja
-├── 💳 payment.php            # Halaman pembayaran
-├── 📊 admin_dashboard.php    # Dashboard admin
-├── 🏨 properties.php         # Daftar hotel
-├── 👤 Register.php           # Registrasi user
-├── 🔐 login.php              # Login sistem
-├── 📱 contact_admin.php      # Kontak admin
-├── ⚙️ settings.php           # Pengaturan
-├── 📁 images/                # Folder gambar
-└── 🎨 *.css                  # File styling
+
+Test mencakup halaman publik, registrasi/login tiap peran, alur booking → pembayaran, keranjang, hak akses agent/admin, dashboard, dan website setting.
+
+## 📂 Struktur
+
+```
+app/
+├── Http/Controllers/
+│   ├── HomeController.php          # beranda, layanan, properties, agent, pencarian
+│   ├── CartController.php          # keranjang (session server)
+│   ├── BookingController.php       # form booking, Pesanan Saya
+│   ├── PaymentController.php       # pilih metode, kode VA/QRIS/COD, konfirmasi
+│   ├── Auth/                       # login, registrasi, reset password
+│   ├── Account/                    # profil, password, bahasa
+│   ├── Agent/                      # dashboard & CRUD hotel agent
+│   └── Admin/                      # dashboard, hotel, kamar, order, agent, setting
+├── Http/Middleware/                # EnsureRole, SetLocale, CheckMaintenanceMode
+├── Models/                         # User, Hotel, RoomType, Booking, Payment, Setting
+└── Services/BookingService.php     # validasi, cek ketersediaan, buat booking
+database/
+├── data/hotels.json                # data 14 hotel bawaan
+├── migrations/
+└── seeders/DatabaseSeeder.php
+resources/views/                    # Blade (layouts, pages, auth, account, cart, bookings, payment, agent, admin)
+public/css, public/images, public/js
+routes/web.php
+tests/Feature/
 ```
 
----
-
-## 🎯 Fitur Unggulan
-
-| Fitur | Status | Deskripsi |
-|-------|--------|----------|
-| 🔍 Pencarian Real-time | ✅ | Pencarian hotel dengan filter lokasi & rating |
-| 🛒 Keranjang Smart | ✅ | Simpan hotel favorit untuk dipesan nanti |
-| 💳 Multi Payment | ✅ | VA BCA, QRIS, COD |
-| 📊 Dashboard Analytics | ✅ | Statistik lengkap untuk admin & agen |
-| 📱 Mobile Responsive | ✅ | Optimized untuk semua perangkat |
-| 🔐 Security First | ✅ | XSS & CSRF protection |
-
----
-
-## 👥 User Roles
-
-### 🧑‍💼 Admin
-- ✅ Kelola semua hotel & kamar
-- ✅ Manajemen agen & user
-- ✅ Laporan & analytics
-- ✅ Website settings
-
-### 🏨 Agent
-- ✅ Kelola hotel milik sendiri
-- ✅ Statistik pemesanan
-- ✅ Laporan pendapatan
-
-### 👤 User
-- ✅ Cari & pesan hotel
-- ✅ Kelola keranjang
-- ✅ Riwayat pemesanan
-- ✅ Profil management
-
----
-
-## 📱 Responsivitas & Keamanan
-
-### 📱 Responsive Design
-- ✅ Desktop (1920px+)
-- ✅ Tablet (768px - 1024px)
-- ✅ Mobile (320px - 767px)
-
-### 🔐 Security Features
-- ✅ XSS Protection
-- ✅ CSRF Protection
-- ✅ Input Validation
-- ✅ File Upload Security
-- ✅ SQL Injection Prevention
-
----
-
-## 📊 Statistics
-
-![PHP](https://img.shields.io/badge/PHP-7.4%2B-blue?style=for-the-badge&logo=php)
-![CSS](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?style=for-the-badge&logo=javascript)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?style=for-the-badge&logo=bootstrap)
-
----
-
-## 🏗️ Feature-Sliced Design (FSD)
-
-### 🌟 Arsitektur Modern
-Proyek ini menggunakan **Feature-Sliced Design (FSD)**, metodologi arsitektur yang:
-- 📦 **Modular**: Setiap fitur terisolasi dan independen
-- 🔧 **Maintainable**: Kode terorganisir berdasarkan domain bisnis
-- 📈 **Scalable**: Mudah menambah fitur dan developer baru
-- 🧪 **Testable**: Setiap layer dapat ditest secara independen
-
-### 📚 Dokumentasi FSD
-📖 **[Baca dokumentasi lengkap FSD](FSD_ARCHITECTURE.md)**
-
-### ✅ Fitur yang Telah Diimplementasi dengan FSD:
-- **Hotel Booking**: Pencarian, filtering, dan manajemen hotel
-- **Shared Components**: Header, navigation, dan utilities
-- **Authentication**: Login, register, dan manajemen sesi
-- **Routing System**: Clean URL routing dengan parameter support
-
-### 🚧 Roadmap FSD:
-- [ ] User Management Feature
-- [ ] Admin Dashboard Feature  
-- [ ] Agent Management Feature
-- [ ] Payment Processing Feature
-- [ ] API Layer Implementation
-- [ ] Unit Testing Framework
-
----
-
-## 🤝 Contributing
-
-Kontribusi sangat diterima! Silakan:
-
-1. 🍴 Fork repository
-2. 🌱 Buat feature branch (`git checkout -b feature/AmazingFeature`)
-3. 💾 Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push to branch (`git push origin feature/AmazingFeature`)
-5. 🔄 Open Pull Request
-
----
+Gambar yang di-upload disimpan di `public/uploads/` (tidak ikut git).
 
 ## 📄 Lisensi
-Proyek ini menggunakan lisensi MIT. Lihat file `LICENSE` untuk detail.
 
-## 🆘 Support
-
-**Butuh bantuan?** Hubungi kami:
-- 📧 Email: support@pemesananhotel.com
-- 💬 Discord: [Join Server](https://discord.gg/your-server)
-- 🐛 Issues: [GitHub Issues](https://github.com/whympxx/UnggulBookingHotel/issues)
-
----
-
-## ⭐ Show Your Support
-
-Jika project ini membantu Anda, berikan ⭐ di GitHub!
-
----
-
-**Made with ❤️ by [whympxx](https://github.com/whympxx)**
-
+MIT

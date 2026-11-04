@@ -1,0 +1,212 @@
+[
+    {
+        "name": "Hotel Santika Prime",
+        "location": "Harapan Indah Bekasi",
+        "price": 688750,
+        "rating": 4.5,
+        "agent": "Larry Naves",
+        "image": "HotelSantika.jpg",
+        "gallery": [
+            "Santika-room1.jpg",
+            "Santika-room2.jpg",
+            "Santika-room3.jpg",
+            "Santika-room4.jpg"
+        ],
+        "description": "Hotel Santika Prime menawarkan pengalaman menginap mewah dengan fasilitas lengkap:\n\n• Kamar & Suite:\n- 200+ kamar modern dengan pemandangan kota\n- Suite mewah dengan balkon pribadi\n- Tempat tidur king-size dengan kasur premium\n- Smart TV 55\" dan sistem hiburan in-room\n\n• Fasilitas:\n- Kolam renang infinity dengan pemandangan kota\n- Spa & Wellness Center dengan 8 ruang perawatan\n- Pusat kebugaran 24 jam dengan peralatan modern\n- 3 restoran internasional\n- Lounge bar dengan live music\n- Meeting rooms hingga 500 orang\n\n• Layanan:\n- Butler service 24 jam\n- Free WiFi di seluruh area\n- Shuttle service ke pusat kota\n- Valet parking\n- Laundry & dry cleaning service"
+    },
+    {
+        "name": "Royal Ambarrukmo",
+        "location": "Yogyakarta",
+        "price": 1588755,
+        "rating": 4.8,
+        "agent": "Robert",
+        "image": "royal-ambarukmo.jpg",
+        "gallery": [
+            "Ambarrukmo-room1.jpg",
+            "Ambarrukmo-room2.jpg",
+            "Ambarrukmo-room3.jpg",
+            "Ambarrukmo-room4.jpg"
+        ],
+        "description": "Royal Ambarrukmo adalah hotel bersejarah dengan kemewahan modern:\n\n• Kamar & Suite:\n- 120 kamar dengan desain Jawa kontemporer\n- Suite dengan pemandangan Gunung Merapi\n- Bale-bale tradisional di balkon\n- Bathtub mewah dengan pemandangan\n\n• Fasilitas:\n- Taman tropis seluas 2 hektar\n- Kolam renang dengan air terjun\n- Spa tradisional Jawa\n- Restoran dengan konsep Rijsttafel\n- Lounge dengan live gamelan\n- Museum mini sejarah hotel\n\n• Layanan:\n- Tour guide ke tempat bersejarah\n- Workshop batik & kerajinan\n- Bicycle rental\n- Shuttle ke Malioboro\n- Traditional massage service"
+    },
+    {
+        "name": "Hotel Novotel",
+        "location": "Bandung",
+        "price": 653801,
+        "rating": 4.6,
+        "agent": "Jessica",
+        "image": "HotelNovotel.jpg",
+        "gallery": [
+            "Novotel-room1.jpg",
+            "Novotel-room2.jpg",
+            "Novotel-room3.jpg",
+            "Novotel-room4.jpg"
+        ],
+        "description": "Novotel Bandung menawarkan kenyamanan modern:\n\n• Kamar & Suite:\n- 200+ kamar dengan desain kontemporer\n- Suite dengan pemandangan kota\n- Tempat tidur Novotel Sweet Bed™\n- Smart TV dengan streaming service\n\n• Fasilitas:\n- Kolam renang indoor & outdoor\n- Fitness center 24 jam\n- Spa dengan 6 ruang perawatan\n- 2 restoran internasional\n- Rooftop bar\n- Business center\n\n• Layanan:\n- Free WiFi premium\n- Shuttle ke factory outlet\n- Tour ke tempat wisata\n- Business services\n- Kids club & babysitting"
+    },
+    {
+        "name": "Hotel Fairfield",
+        "location": "Bali",
+        "price": 1131350,
+        "rating": 4.6,
+        "agent": "Jefri Nichol",
+        "image": "fairfield.jpg",
+        "gallery": [
+            "Fairfield-room1.jpg",
+            "Fairfield-room2.jpg",
+            "Fairfield-room3.jpg",
+            "Fairfield-room4.jpg"
+        ],
+        "description": "Fairfield Bali menawarkan kenyamanan modern:\n\n• Kamar & Suite:\n- 200+ kamar dengan desain kontemporer\n- Suite dengan pemandangan kota\n- Tempat tidur Fairfield Sweet Bed™\n- Smart TV dengan streaming service\n\n• Fasilitas:\n- Kolam renang indoor & outdoor\n- Fitness center 24 jam\n- Spa dengan 6 ruang perawatan\n- 2 restoran internasional\n- Rooftop bar\n- Business center\n\n• Layanan:\n- Free WiFi premium\n- Shuttle ke factory outlet\n- Tour ke tempat wisata\n- Business services\n- Kids club & babysitting"
+    },
+    {
+        "name": "Hotel Kempinski",
+        "location": "Jakarta Pusat",
+        "price": 688750,
+        "rating": 4.5,
+        "agent": "Marco Van Basten",
+        "image": "HotelKempinski.jpg",
+        "gallery": [
+            "Kempinski-room1.jpg",
+            "Kempinski-room2.jpg",
+            "Kempinski-room3.jpg",
+            "Kempinski-room4.jpg"
+        ],
+        "description": "Hotel Kempinski Jakarta Pusat menawarkan kenyamanan dan kemudahan:\n• Kamar & Suite:\n- 150+ kamar dengan desain modern\n- Suite dengan ruang tamu terpisah\n- Tempat tidur nyaman\n- Smart TV dengan berbagai saluran\n• Fasilitas:\n- Kolam renang outdoor\n- Pusat kebugaran\n- Restoran dengan masakan lokal\n- Ruang pertemuan\n\n• Layanan:\n- WiFi gratis\n- Layanan kamar 24 jam\n- Layanan laundry\n- Parkir gratis"
+    },
+    {
+        "name": "Hotel Spencer Green",
+        "location": "Malang Batu",
+        "price": 403603,
+        "rating": 4.7,
+        "agent": "Larry Naves",
+        "image": "spencer_green_hotel.jpg",
+        "gallery": [
+            "Spencer Green-room1.jpg",
+            "Spencer Green-room2.jpg",
+            "Spencer Green-room3.jpg",
+            "Spencer Green-room4.jpg"
+        ],
+        "description": "Spencer Green Hotel di Malang adalah hotel yang sangat direkomendasikan yang menawarkan pengalaman menginap yang nyaman dengan fasilitas yang baik, pemandangan yang menyenangkan, dan akses mudah ke berbagai objek wisata populer di Batu.:\n\n• Fasilitas:\n- Kamar: Menawarkan berbagai tipe kamar seperti Deluxe Twin/Double dan Executive Twin/Double, serta Superior Triple. Kamar-kamar umumnya dilengkapi dengan AC, TV layar datar, meja kerja, WiFi gratis, dan kamar mandi pribadi dengan shower. Beberapa kamar memiliki balkon dengan pemandangan gunung.\n- Kolam Renang: Tersedia kolam renang outdoor dan kolam renang anak.\n- Kuliner: Memiliki restoran di tempat yang menyajikan masakan lokal dan internasional, serta kafe rooftop dengan pemandangan panorama. Layanan kamar juga tersedia.\n- Spa: Menyediakan layanan spa untuk relaksasi.\n- Rekreasi: Menawarkan karaoke keluarga, taman, dan terkadang aktivitas outdoor.\n- Spa dengan konsep alami\n\n• Layanan:\n- Parkir mandiri gratis.\n- Meja depan 24 jam dengan layanan concierge.\n- Penyimpanan bagasi dan brankas.\n- Ruang pertemuan.\n- Layanan binatu/cuci kering.\n- Wi-Fi gratis di seluruh properti."
+    },
+    {
+        "name": "Hotel Aston Imperial",
+        "location": "Bekasi Barat",
+        "price": 613676,
+        "rating": 4.9,
+        "agent": "Larry Naves",
+        "image": "Hotel aston bekasi.jpg",
+        "gallery": [
+            "Aston Bekasi-room1.jpg",
+            "Aston Bekasi-room2.jpg",
+            "Aston Bekasi-room3.jpg",
+            "Aston Bekasi-room4.jpg"
+        ],
+        "description": "Aston Imperial Bekasi Hotel adalah pilihan yang solid bagi Anda yang mencari akomodasi nyaman dengan fasilitas lengkap dan lokasi strategis di Bekasi Barat.:\n\n• Kamar & Suite:\n- 180 kamar dengan desain mewah\n- Presidential suite dengan 3 kamar\n- Tempat tidur Kempinski premium\n- Smart room control system\n\n• Fasilitas:\n- Rooftop infinity pool\n- Spa dengan 12 ruang perawatan\n- Fitness center dengan personal trainer\n- 5 restoran bintang Michelin\n- Cigar lounge\n- Ballroom untuk 1000 orang\n\n• Layanan:\n- 24/7 butler service\n- Private jet & helicopter service\n- Luxury car rental\n- Personal shopping service\n- Executive lounge access"
+    },
+    {
+        "name": "Hotel Trikora Beach",
+        "location": "Bintan Regency, Riau",
+        "price": 900000,
+        "rating": 4.9,
+        "agent": "Jessica",
+        "image": "Hotel trikora beach.jpg",
+        "gallery": [
+            "Trikora Beach-room1.jpg",
+            "Trikora Beach-room2.jpg",
+            "Trikora Beach-room3.jpg",
+            "Trikora Beach-room4.jpg"
+        ],
+        "description": "Pantai Trikora adalah destinasi yang sempurna bagi Anda yang mencari ketenangan dan keindahan alam bahari di Pulau Bintan.:\n\n• Kamar & Suite:\n- 150+ kamar dan vila dengan pemandangan laut dan taman\n- Suite keluarga dengan area bermain anak\n- Tempat tidur nyaman dengan linen kualitas premium\n- Wifi kecepatan tinggi\n\n• Fasilitas:\n- Kolam renang infinity dengan pemandangan pantai\n- Spa dengan layanan pijat tradisional Bintan\n- Pusat aktivitas air (snorkeling, kayak, paddleboard)\n- 3 restoran dengan hidangan laut segar dan masakan lokal\n- Kids club dengan program edukatif\n- Area api unggun di tepi pantai\n\n• Layanan:\n- Resepsionis 24/7\n- Antar jemput bandara\n- Penyewaan sepeda dan skuter\n- Tur lokal dan island hoppin\n- Kelas memasak dan masakan lokal"
+    },
+    {
+        "name": "Hotel Continental",
+        "location": "Cimenyan, Bandung",
+        "price": 850000,
+        "rating": 4.9,
+        "agent": "Robert",
+        "image": "HotelContinental.jpg",
+        "gallery": [
+            "Continental-room1.jpg",
+            "Continental-room2.jpg",
+            "Continental-room3.jpg",
+            "Continental-room4.jpg"
+        ],
+        "description": "InterContinental Hotel Dago Pakar Bandung adalah pilihan sempurna bagi Anda yang mencari kemewahan, ketenangan, dan keindahan alam dalam satu paket di Bandung.:\n\n• Kamar & Suite:\n- 200+ kamar dengan pemandangan kota\n- InterContinental suite dengan butler pribadi\n- Smart home system\n\n• Fasilitas:\n- Tempat tidur premium\n- Kamar mandi mewah\n- Teknologi Modern\n- Fasilitas lengkap dan mendukung\n- Kids Club\n\n• Layanan:\n- Resepsionis 24/7\n- Layanan Concierge\n- Layanan kamar 24 jam\n- Antar - Jemput (Bandara/Lokal)\n- Valet Parking\n- Wifi gratis"
+    },
+    {
+        "name": "Hotel The Phoneix",
+        "location": "Jetis, Kota Yogyakarta",
+        "price": 1245000,
+        "rating": 4.9,
+        "agent": "Marco Van Basten",
+        "image": "The Phoneix Hotel.jpg",
+        "gallery": [
+            "The Phoneix-room1.jpg",
+            "The Phoneix-room2.jpg",
+            "The Phoneix-room3.jpg",
+            "The Phoneix-room4.jpg"
+        ],
+        "description": "The Ritz-Carlton Jakarta menawarkan kemewahan tertinggi:\n\n• Kamar & Suite:\n- 200+ kamar dengan pemandangan kota\n- Ritz-Carlton suite dengan butler pribadi\n- Tempat tidur Ritz-Carlton signature\n- Smart home system\n\n• Fasilitas:\n- Sky pool dengan pemandangan 360°\n- Spa dengan 15 ruang perawatan\n- Fitness center dengan view kota\n- 6 restoran bintang Michelin\n- Club lounge eksklusif\n- Grand ballroom\n\n• Layanan:\n- Personal butler 24/7\n- Private jet & limousine service\n- Concierge service premium\n- Personal shopping & styling\n- Exclusive club access"
+    },
+    {
+        "name": "Hotel Bali Resort",
+        "location": "Bali",
+        "price": 1950000,
+        "rating": 4.9,
+        "agent": "Jefri Nichol",
+        "image": "Hotel bali resort.jpg",
+        "gallery": [
+            "Bali Resort-room1.jpg",
+            "Bali Resort-room2.jpg",
+            "Bali Resort-room3.jpg",
+            "Bali Resort-room4.jpg"
+        ],
+        "description": "Hotel Bali Resort adalah pilihan ideal bagi Anda yang mencari liburan yang menenangkan, penuh inspirasi, dan mendalam di tengah keindahan dan keramahan Bali.:\n\n• Kamar & Suite:\n- 250+ kamar dengan pemandangan taman tropis atau kolam renang\n- vila pribadi dengan kolam renang privat\n- Tempat tidur premium dengan linen berkualitas tinggi\n- Sistem pendingin independen\n\n• Fasilitas:\n- Kolam renang berbentuk laguna dengan area berjemur\n- Spa tradisional Bali dengan 10 ruang perawatan\n- Pusat kebugaran dengan peralatan modern\n- 3 restoran dengan masakan Bali dan Internasional\n- Bar tepi kolam renang\n- Ruang serbaguna untuk acara dan pertemuan\n\n• Layanan:\n- Layanan pramutamu 24/7\n- Layanan antar-jemput bandara\n- Penyewaan kendaraan\n- Layanan kamar 24 jam\n- Jasa penukaran mata uang\n- Layanan penitipan anak (atas permintaan)"
+    },
+    {
+        "name": "Hotel Raffles",
+        "location": "Jakarta Selatan",
+        "price": 4750000,
+        "rating": 4.9,
+        "agent": "Jefri Nichol",
+        "image": "raffles.jpg",
+        "gallery": [
+            "Raffles-room1.jpg",
+            "Raffles-room2.jpg",
+            "Raffles-room3.jpg",
+            "Raffles-room4.jpg"
+        ],
+        "description": "Secara keseluruhan, Raffles Jakarta bukan sekadar tempat menginap, melainkan sebuah destinasi yang menawarkan perpaduan sempurna antara warisan seni, kemewahan abadi, dan layanan legendaris, menciptakan pengalaman yang mendalam dan tak terlupakan bagi setiap tamu yang mencari keunggulan di ibu kota.:\n\n• Kamar & Suite:\n- 173 kamar & suite mewah dengan pemandangan kota atau taman\n- Raffles Suite dengan Raffles Butler pribadi\n- Tempat tidur premium khas Raffles\n- Sistem kontrol kamar modern (termasuk pencahayaan dan tirai)\n\n• Fasilitas:\n- Kolam renang luar ruangan dengan area bersantai di taman tropis\n- Raffles Spa dengan berbagai ruang perawatan dan area relaksasi\n- Pusat kebugaran lengkap dengan peralatan modern\n- Berbagai pilihan kuliner: Arts Café by Raffles, The Writers Bar, Navina Pool Bar\n- Club Lounge eksklusif (di beberapa properti atau untuk tamu suite tertentu)\n- Dian Ballroom & ruang pertemuan serbaguna\n\n• Layanan:\n- Raffles Butler 24/7 yang personal dan intuitif\n- Layanan mobil mewah & transportasi bandara\n- Concierge service premium untuk segala kebutuhan\n- Layanan tata graha harian\n- Akses eksklusif ke fasilitas club (untuk tamu tertentu)"
+    },
+    {
+        "name": "The Ritz-Carlton",
+        "location": "Jakarta",
+        "price": 8000000,
+        "rating": 4.9,
+        "agent": "Jessica",
+        "image": "ritz-carlton.jpg",
+        "gallery": [
+            "ritz-room1.jpg",
+            "ritz-room2.jpg",
+            "ritz-room3.jpg",
+            "ritz-room4.jpg"
+        ],
+        "description": "The Ritz-Carlton Jakarta menawarkan kemewahan tertinggi:\n\n• Kamar & Suite:\n- 200+ kamar dengan pemandangan kota\n- Ritz-Carlton suite dengan butler pribadi\n- Tempat tidur Ritz-Carlton signature\n- Smart home system\n\n• Fasilitas:\n- Sky pool dengan pemandangan 360°\n- Spa dengan 15 ruang perawatan\n- Fitness center dengan view kota\n- 6 restoran bintang Michelin\n- Club lounge eksklusif\n- Grand ballroom\n\n• Layanan:\n- Personal butler 24/7\n- Private jet & limousine service\n- Concierge service premium\n- Personal shopping & styling\n- Exclusive club access"
+    },
+    {
+        "name": "Hotel Fave Malang",
+        "location": "Malang",
+        "price": 504000,
+        "rating": 4.9,
+        "agent": "Marco Van Basten",
+        "image": "HotelFave.jpg",
+        "gallery": [
+            "Fave Malang-room1.jpg",
+            "Fave Malang-room2.jpg",
+            "Fave Malang-room3.jpg",
+            "Fave Malang-room4.jpg"
+        ],
+        "description": "Favehotel Malang adalah hotel bintang 3 yang terletak di kawasan perbelanjaan di Malang:\n\n• Fasilitas Populer:\n - WiFi gratis\n - Parkir mandiri gratis\n - Resepsionis 24 jam\n - Restoran (Lime Restaurant, buka 06.00-22.00, menyajikan sarapan prasmanan dan menu à la carte Indonesia serta Barat)\n - Layanan kamar (jam tertentu)\n - Fasilitas laundry\n - Penitipan bagasi\n - Ruang rapat (Telogomas Meeting Room dengan berbagai ukuran)\n - Kamar bebas rokok\n - AC di setiap kamar\n - Brankas di kamar\n - Meja tulis\n - Televisi LCD dengan saluran kabel\n - Kamar mandi pribadi dengan shower dan perlengkapan mandi gratis\n - Pembersihan kamar harian\n\n• Tipe Kamar:\n- Superior Room\n- Deluxe Room\n- Deluxe Premier Room\n- Deluxe Family Room"
+    }
+]
