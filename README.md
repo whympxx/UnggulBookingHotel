@@ -2,6 +2,20 @@
 
 Aplikasi web pemesanan hotel dengan tiga peran (Customer, Agent, Admin), dibangun ulang menggunakan **Laravel 12**.
 
+![Beranda dengan scene 3D gedung hotel di atas pulau melayang](docs/screenshots/01-beranda.webp)
+
+## 📸 Tampilan
+
+| Jelajahi hotel (filter & urutan) | Detail hotel |
+|---|---|
+| ![Halaman jelajahi hotel dengan filter lokasi, harga, rating dan urutan](docs/screenshots/02-jelajahi.webp) | ![Halaman detail hotel dengan galeri foto kamar](docs/screenshots/03-detail-hotel.webp) |
+| **Login dengan scene 3D** | **Pembayaran + kode promo** |
+| ![Halaman login split-screen dengan scene 3D](docs/screenshots/04-login.webp) | ![Halaman pembayaran dengan kode promo dan pilihan metode bayar](docs/screenshots/05-pembayaran-promo.webp) |
+| **Pesanan Saya** | **Dashboard Agent** |
+| ![Daftar pesanan customer dengan status pembayaran](docs/screenshots/06-pesanan-saya.webp) | ![Dashboard agent dengan statistik dan pemesanan terbaru](docs/screenshots/07-dashboard-agent.webp) |
+| **Dashboard Admin** | **Kelola Kode Promo** |
+| ![Dashboard admin dengan grafik pendapatan dan okupansi kamar](docs/screenshots/08-dashboard-admin.webp) | ![Halaman admin untuk mengelola kode promo](docs/screenshots/09-admin-promo.webp) |
+
 ## 🧩 Fitur
 
 | Peran | Fitur |
